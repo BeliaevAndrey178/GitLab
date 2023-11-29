@@ -1,3 +1,6 @@
+#########Скрипт позволяет выпустить индивидуальный токен для авторизованного пользователя введия################
+#########лишь Username  и Password токе выводится с помощью echo#################
+
 #!/bin/bash
 export GITLAB_HOST="https://gitlab.services-for-app.space:443/"
 export GITLAB_USER="User"
