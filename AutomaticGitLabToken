@@ -9,7 +9,7 @@ response=$(curl --request POST "${GITLAB_HOST}/oauth/token" \
 --header "Content-Type: application/json" \
 --data '{"grant_type": "password", "username": "'"${GITLAB_USER}"'", "password": "'"${GITLAB_PASSWORD}"'"}')
 
-access_token=$(echo "${response}" | jq -r '.access_token')
+access_token=$(echo "${response}" | jq -r '.access_token')  #########jq - это парсер для json файлов, его надо скаичивать отдельно 
 echo "${access_token}"
 
 response2=$(curl --request GET "$GITLAB_HOST/api/v4/users?username=$GITLAB_USER" \
